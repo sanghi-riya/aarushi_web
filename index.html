@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarushi Jain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #444;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #00FFC3;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        /* Responsive menu */
+        .navbar ul.mobile {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        @media (max-width: 720px) {
+            .navbar ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .navbar ul.mobile.show {
+                display: flex;
+            }
+        }
+
+        /* Section styles */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Content boxes */
+        .content-box {
+            text-align: left;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-button {
+            background-color: #00FFC3;
+            color: #1e1e2f;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-button:hover {
+            background-color: #00e5b2;
+            transform: scale(1.05);
+        }
+
+        /* Contact Icons */
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .contact-icons a {
+            color: #00FFC3;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-icons a:hover {
+            color: #1e1e2f;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        /* Responsive content */
+        @media (max-width: 480px) {
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .content-box {
+                padding: 15px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.querySelector('.navbar ul.mobile');
+            mobileMenu.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="mobile">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="content-box">
+            <p>I'm Aarushi Jain, a dedicated student of Electronics and Communication Engineering at SLIET. Passionate about aircraft maintenance, avionics, and robotics, I have developed projects in satellite tracking and autonomous robots. I enjoy working on real-time data analytics and enhancing my technical expertise in electronics and automation.</p>
+            <a href="https://drive.google.com/file/d/your-resume-link/view?usp=sharing" class="contact-button" target="_blank">
+                <i class="fas fa-file-pdf"></i> View My Resume
+            </a>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="content-box">
+            <h3>Sant Longowal Institute of Engineering and Technology (SLIET)</h3>
+            <p>B.E. in Electronics and Communication Engineering</p>
+            <p>CGPA: 7.73/10</p>
+            <p>Sangrur, Punjab | Aug. 2021 - Present</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="content-box">
+            <h3>Summer Intern</h3>
+            <p>Defence Institute of Advanced Technology, DRDO Pune | Jun 2024 - Present</p>
+            <ul>
+                <li>Worked on design and implementation of prototype sensors and antennas.</li>
+                <li>Designed and analyzed a helical antenna for satellite communication.</li>
+            </ul>
+        </div>
+        <div class="content-box">
+            <h3>Summer Trainee</h3>
+            <p>Sha-Shib Flying Academy, Guna Airport, India | Jun 2023 - Jul 2023</p>
+            <ul>
+                <li>Gained hands-on experience in aircraft maintenance and avionics.</li>
+                <li>Learned maintenance procedures and cockpit operations.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="content-box">
+            <h3>Autonomous Agro-Bot</h3>
+            <p>Developed a bot capable of analyzing plants under crop canopies and providing real-time data on plant traits.</p>
+        </div>
+        <div class="content-box">
+            <h3>Swatchhta Bot</h3>
+            <p>Created a city-cleaning bot for automated waste collection.</p>
+        </div>
+        <div class="content-box">
+            <h3>Line Following Robot</h3>
+            <p>Built a line-following robot using PID algorithms.</p>
+        </div>
+        <div class="content-box">
+            <h3>IoT-based Satellite Tracking System</h3>
+            <p>Developed a motorized system to automatically adjust antenna angles for satellite tracking.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-icons">
+            <a href="mailto:2140210@sliet.ac.in"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/aarushi-jain-511353230" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aarushi Jain. All rights reserved.</p>
+    </footer>
+</body>
+</html>
